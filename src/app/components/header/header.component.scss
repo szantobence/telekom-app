@@ -4,10 +4,21 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
-  }
+
+    .buttons {
+
+      .navigation-button {
+        padding: 0.5rem 3rem;
+        border: 1px solid;
+        border-radius: 10px;
+        background: transparent;
+
+        &:hover {
+          background-color: aquamarine;
+        }
+      }
   
-  .buttons {
-    display: flex;
-    gap: 1rem;
-  }
-  
+      display: flex;
+      gap: 1rem;
+    }
+ }
