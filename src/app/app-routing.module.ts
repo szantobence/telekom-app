@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'mice',
     loadChildren: () => import('./components/mice/mice.module').then(m => m.MiceModule)
+  },
+  {
+    path: '**',
+    component: DefaultPageComponent
   }
 ];
 
