@@ -1,12 +1,14 @@
 import { createReducer, on } from "@ngrx/store";
 import * as navigation from "../actions/navigation.actions";
-import { Navigation } from "src/app/models/Navigation.interface";
+import { NavigationData } from "src/app/models/navigation-data.interface";
 
-const initialNavigationState: Navigation = {
+const initialNavigationState: NavigationData = {
     isCatsActive: false,
 }
 
-export const navigationReducer = createReducer(
+export const navigationDataReducer = createReducer(
     initialNavigationState,
     on(navigation.activateCats, (state, action) => ({ ...state, isCatsActive: action.isCatsActive })),
 );
+
+//I have used the newer format at the implementation of the reducer and all in all ngrx

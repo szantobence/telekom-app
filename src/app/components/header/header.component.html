@@ -1,9 +1,13 @@
 <div class="header-container">
-    <h1>{{ title }}</h1>
-    <div class="buttons">
-      <button class="navigation-button" routerLink='/cats'>Cats</button>
-      <button class="navigation-button" routerLink='/dogs'>Dogs</button>
-      <button class="navigation-button" (click)="activateCats()" routerLink='/mice'>Mice</button>
+  <h1>{{ GeneralTexts.HEADER_TITLE }}</h1>
+  <div class="buttons-container">
+    <div class="buttons" *ngFor="let button of navigationButtons">
+      <button class="navigation-button"
+              [ngClass]="{'disabled': button.id === 'cats' && !(getCatsPageStatus() | async)?.isCatsActive }"
+              [routerLink]='button.route' (click)="activateCats(button.id)">
+        <img class="header-icon" src="../../../assets/icons/{{button.id}}-icon.svg">
+        <span class="text">{{button.name}}</span>
+      </button>
     </div>
+  </div>
 </div>
-  

@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { DefaultPageComponent } from './components/default-page/default-page.component';
-import { navigationReducer } from './store/reducers/navigation.reducer';
+import { navigationDataReducer } from './store/reducers/navigation.reducer';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { navigationReducer } from './store/reducers/navigation.reducer';
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({
-      navigation: navigationReducer
+      navigation: navigationDataReducer
     })
   ],
   providers: [],
