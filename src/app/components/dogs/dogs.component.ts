@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GeneralTexts } from 'src/app/models/general-texts';
 
 @Component({
   selector: 'app-dogs',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./dogs.component.scss']
 })
 export class DogsComponent {
+
+  GeneralTexts = GeneralTexts;
 
 }

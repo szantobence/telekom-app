@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GeneralTexts } from 'src/app/models/general-texts';
 
 @Component({
   selector: 'app-cats',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./cats.component.scss']
 })
 export class CatsComponent {
+
+  GeneralTexts = GeneralTexts;
 
 }
