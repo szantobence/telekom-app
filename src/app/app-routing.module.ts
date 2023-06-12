@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DefaultPageComponent } from './components/default-page/default-page.component';
+import { catsPageGuard } from './guards/cats-page.guard';
 
 const routes: Routes = [
   {
@@ -9,6 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'cats',
+    canActivate:[catsPageGuard],
     loadChildren: () => import('./components/cats/cats.module').then(m => m.CatsModule)
   },
   {

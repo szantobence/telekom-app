@@ -1,9 +1,9 @@
 <div class="header-container">
     <h1>{{ title }}</h1>
     <div class="buttons">
-      <button class="navigation-button" type="button" routerLink='/cats'>Cats</button>
-      <button class="navigation-button" type="button" routerLink='/dogs'>Dogs</button>
-      <button class="navigation-button" type="button" routerLink='/mice'>Mice</button>
+      <button class="navigation-button" routerLink='/cats'>Cats</button>
+      <button class="navigation-button" routerLink='/dogs'>Dogs</button>
+      <button class="navigation-button" (click)="activateCats()" routerLink='/mice'>Mice</button>
     </div>
 </div>
   

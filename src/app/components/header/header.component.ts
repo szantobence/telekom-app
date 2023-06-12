@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import * as navigationActions from '../../store/actions/navigation.actions'
 
 @Component({
   selector: 'app-header',
@@ -8,5 +10,13 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
 
   title = "Telekom app";
+
+  constructor(private store: Store<{navigation: {isCatsActive: boolean}}>) {}
+
+  activateCats() {
+    this.store.dispatch(navigationActions.activateCats(
+        {isCatsActive: true}
+      ));
+  }
 
 }
